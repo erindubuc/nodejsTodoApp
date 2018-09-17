@@ -1,7 +1,7 @@
 var express = require('express');
 var todoController = require('./controllers/todoController');
-// const ejsLint = require('ejs-lint');
-// var check = require('syntax-error')
+const ejsLint = require('ejs-lint');
+var check = require('syntax-error')
 
 var app = express();
 
@@ -9,7 +9,7 @@ var app = express();
 app.set('view engine', 'ejs');
 
 // serve up static files 
-app.use(express.static('./assets'));
+app.use(express.static('assets'));
 
 // fire controllers
 todoController(app);
